@@ -1,0 +1,101 @@
+.login {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-image: url(../../assets/diagonal-stripes.svg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginbox {
+    min-width: 900px;
+    min-height: 400px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.login-image {
+    background-image: url(../../assets/cash.jpg);
+    background-size: cover;
+
+}
+
+.login-section {
+    min-height: 400px;
+
+    .btn {
+        padding: .3rem 1rem;
+        height: 2rem;
+        font-size: 1rem;
+        color: white;
+    }
+}
+
+form{
+    .btn-request{
+        background-color: #F05454;
+    }
+    .btn-status{
+        background-color: #A6CF98;
+    }
+    .form-control {
+        border-radius: 0;
+        box-shadow: none;
+        border: 0;
+        border-bottom: 2px solid black;
+        height: 1.5rem;
+        background-color: transparent;
+        padding: 0;
+    }
+}
+
+// model
+.modal-header {
+    border-bottom: 0
+}
+
+.modal {
+    border-radius: 0;
+    .modal-body{
+        padding: 0rem 3rem 2rem;
+    }
+
+    .btn-confirm {
+        background-color: #C36A2D;
+        border-radius: 0;
+        color: white;
+    }
+
+    .btn-cancel {
+        background-color: #FDF6EC;
+        border-radius: 0;
+        box-shadow: none;
+
+    }
+
+    .btn-cancel:hover {
+        transform: scale(1.1);
+        transition: all 0.2s ease;
+    }
+
+    .btn-close {
+        font-size: 1rem;
+        box-shadow: none;
+    }
+
+    .btn-confirm:hover {
+        transform: scale(1.1);
+        transition: all 0.2s ease;
+    }
+
+    .form-control {
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+    }
+    .button-section{
+        margin-top: 3rem;
+    }
+}

@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.admin {
+    min-height: 100vh;
+    position: relative;
+}
+
+.side-bar {
+    min-height: calc(100vh - 56px);
+    background-color: white;
+    box-shadow: 3px 0px 3px rgba(109, 108, 108, 0.121);
+
+    ul {
+        list-style: none;
+    }
+
+    li {
+        padding: 1.5rem 1rem;
+        cursor: pointer;
+    }
+
+    .img-place {
+        height: 8rem;
+        width: 8rem;
+        border-radius: 50%;
+        border: 1px solid black;
+        margin: auto;
+        margin-bottom: 3rem;
+        margin-top: 3rem;
+        background-color: rgb(255, 187, 0);
+    }
+}
+
+.content-box {
+    height: 100vh;
+    padding: 1rem;
+}
+
+.active {
+    color: blue;
+    transform: scale(1.02);
+}

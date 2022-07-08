@@ -1,0 +1,91 @@
+<div class="login">
+    <div class="row">
+        <div class="col-lg-8 loginbox shadow">
+            <div class="row">
+                <div class="col-lg-6 p-5">
+                    <div class="login-section">
+                        <p class="lead fs-2">LOGIN</p>
+                        <form (ngSubmit)="login()">
+                            <!-- username -->
+                            <div class="mb-3">
+                                <label for="username">Username</label>
+                                <input type="text" name=username class="form-control" [(ngModel)]="loginForm.username"
+                                    autocomplete="off">
+                            </div>
+                            <!-- password -->
+                            <div class="mb-3">
+                                <label for="password">Password</label>
+                                <input type="password" name="password" [(ngModel)]="loginForm.password"
+                                    class="form-control">
+                            </div>
+                            <!-- Login Button -->
+                            <div class="lower mt-2 d-flex justify-content-between">
+                                <p class="lead">Forgot Password?</p>
+                                <button type="submit" class="btn btn-primary rounded-pill">LOG IN</button>
+                            </div>
+                            <hr>
+                            <button type="button" class="btn btn-request w-100 rounded-pill mt-2" data-bs-toggle="modal"
+                                data-bs-target="#request-modal">Create New Account Request</button>
+                            <button type="button" class="btn btn-status w-100 rounded-pill mt-2" data-bs-toggle="modal"
+                            data-bs-target="#status-modal">Check Status of
+                                Request</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 login-image">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- modal for request -->
+
+<div class="modal fade" id="request-modal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="content">
+                    <h3>Validate Account No</h3>
+                    <p>If you want to create a net-banking account, you must be a account holder of our Bank. In order
+                        to verify the same, kindly enter your valid Account No. On successful validation, you will be
+                        directed to request form, where you can submit your request.</p>
+                    <h6 class="fw-bold">Account Number</h6>
+                    <input type="number" name="accountNo" id="accountNo" class="form-control"
+                        placeholder="Enter 6 digit Account No" [(ngModel)]="accountNo">
+                    <div class="button-section">
+                        <button class="btn-confirm btn" (click)="validateAccountNo()" data-bs-dismiss="modal">Confirm</button>
+                        <button class="btn-cancel btn ms-3" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal for status -->
+<div class="modal fade" id="status-modal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="content">
+                    <h3>Status of Request</h3>
+                    <p>If You have created any request for creating a net-banking account, then it's status can be checked by entering Account Number</p>
+                    <h6 class="fw-bold">Account Number</h6>
+                    <input type="number" name="accountNo" id="accountNo" class="form-control"
+                        placeholder="Enter 6 digit Account No" [(ngModel)]="statusAccountNo">
+                        <p *ngIf="requestStatus!=undefined" class="text-center fs-bold text-success mt-2">{{requestStatus}}</p>
+                    <div class="button-section">
+                        <button class="btn-confirm btn" (click)="checkStatus()">Confirm</button>
+                        <button class="btn-cancel btn ms-3" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

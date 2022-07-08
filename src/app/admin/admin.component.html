@@ -1,0 +1,23 @@
+<div class="admin">
+        <div class="navbar mb-5">
+                <app-navbar></app-navbar>
+        </div>
+
+        <!-- open new account -->
+        <div class="row ">
+                <div class="col-2 side-bar">
+                        <div class="img-place"></div>
+                        <ul>
+                                <li routerLink="dashboard" routerLinkActive="active">Dashboard</li>
+                                <li routerLink="open-account" routerLinkActive="active">Open Account</li>
+                                <li routerLink="account-holders" routerLinkActive="active">Account Holders</li>
+                                <li routerLink="account-requests" routerLinkActive="active">Account Requests</li>
+                                <li routerLink="notification-portal" routerLinkActive="active">Notification Portal</li>
+                        </ul>
+                </div>
+                <div class="col-10 bg-light content-box">
+                        <router-outlet></router-outlet>
+                </div>
+        </div>
+        <!-- all requests -->
+</div>

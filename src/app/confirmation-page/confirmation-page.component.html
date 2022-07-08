@@ -1,0 +1,20 @@
+{{user|json}}
+<div class="confirmation-page border p-4">
+    <div class="details">
+        <h5>First Name</h5>
+        <p>{{user.firstname}}</p>
+        <h5>Last Name</h5>
+        <p>{{user.lastname}}</p>
+        <h5>Gender</h5>
+        <p>{{user.gender}}</p>
+        <h5>Permanent Address</h5>
+        <p>{{user.address.houseName}}, {{user.address.street}}, {{user.address.pincode}}</p>
+        <h5>Aadhar Number</h5>
+        <p>{{user.aadharNo}}</p>
+    </div>
+    <div class="confirmation d-flex p-3">
+        <input type="number" name="accountNo" class="form-control" [(ngModel)]="accountNo" placeholder="Please enter 6-digit unique account number">
+        <input type="number" name="pin" class="form-control" [(ngModel)]="pin" placeholder="Please enter 4-digit Number">
+        <button class="btn btn-warning" (click)="confirm()">Submit</button>
+    </div>
+</div>

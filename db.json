@@ -1,0 +1,27 @@
+{
+  "bank": [
+    {
+      "id": 1,
+      "accNo": 112233,
+      "name": "JayPal",
+      "pin":1234
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin",
+      "accNo":101010
+    },
+    {
+      "id": 2,
+      "username": "jay",
+      "password": "jay",
+      "accNo":112233
+    }
+  ],
+  "requests": {
+    
+  }
+}

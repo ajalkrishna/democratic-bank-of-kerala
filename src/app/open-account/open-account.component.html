@@ -1,0 +1,102 @@
+<!-- 
+    first name
+    last name
+    gender
+    address
+    -house number
+    - street
+    -district
+    -pincode
+
+    aadhar no
+    photo
+    signature
+
+    on successful submission 
+    pop up will arise in that a random 6 digit account no give
+    checks wheather it isvalid or not
+    if its valid add data to db
+
+ -->
+<div class="account-form p-5">
+    <form [formGroup]="newAccount" (ngSubmit)="submitForm()">
+        <p class="lead">Personal Information</p>
+        <hr>
+        <div class="row row-cols-1 row-cols-lg-3 g-4">
+            <!-- firstname -->
+            <div class="col">
+                <label for="">Firstname</label>
+                <input type="text"formControlName='firstname' class="form-control" autocomplete="off">
+            </div>
+            <!-- lastname -->
+            <div class="col">
+                <label for="">Lastname</label>
+                <input type="text"formControlName='lastname' class="form-control" autocomplete="off">
+            </div>
+            <!-- gender -->
+            <div class="col">
+                <label>Gender</label>
+                <div class="d-flex justify-content-evenly">
+                    <div class="form-check" *ngFor="let type of genderTypes">
+                        <input class="form-check-input" name="genderOptions" type="radio" [value]="type"
+                            (input)="genderOpted($event)">
+                        <label class="form-check-label">
+                            {{type}}
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <label for="">E-mail</label>
+                <input type="email"formControlName='email' class="form-control" autocomplete="off">
+            </div>
+
+            <div class="col">
+                <label for="">Account Balannce</label>
+                <input type="text"formControlName='balance' class="form-control" autocomplete="off">
+            </div>
+        </div>
+
+        <p class="lead mt-3">Permanent Address</p>
+        <hr>
+        <div class="row" [formGroup]="getAddress()">
+
+            <div class="col-lg-4">
+                <label for="">House Name</label>
+                <input type="text" formControlName="houseName" class="form-control" autocomplete="off">
+            </div>
+
+            <div class="col-lg-4">
+                <label for="">Street</label>
+                <input type="text" formControlName="street" class="form-control" autocomplete="off">
+            </div>
+
+            <div class="col-lg-4">
+                <label for="">Pincode</label>
+                <input type="number" formControlName="pincode" class="form-control" autocomplete="off">
+            </div>
+        </div>
+
+        <p class="lead mt-3">Documents</p>
+        <hr>
+        <div class="row">
+            <!-- firstname -->
+            <div class="col-lg-4">
+                <label for="">Aadhar Number</label>
+                <input type="number"formControlName='aadharNo' class="form-control" autocomplete="off">
+            </div>
+            <!-- lastname -->
+            <div class="col-lg-4">
+                <label for="">Aadhar Proof</label>
+                <input type="file" class="form-control" (input)="aadharProof(aadhar)" #aadhar disabled>
+            </div>
+            <!-- gender -->
+            <!-- lastname -->
+            <div class="col-lg-4">
+                <label for="">Photo</label>
+                <input type="file" class="form-control" (input)="photoSelected(userPic)" #userPic disabled>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary d-block ms-auto mt-5 w-100" [disabled]="newAccount.invalid || optedGender==undefined">Create Account</button>
+    </form>
+</div>

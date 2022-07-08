@@ -1,0 +1,50 @@
+<div class="pre-loader" *ngIf="!preview">
+    <div class="content">
+        <img src="../../assets/290-coin-outline.gif" width="100px">
+    </div>
+</div>
+
+<div class="home" *ngIf="preview">
+    <nav class="navbar navbar-expand-md">
+        <div class="container">
+            <a class="navbar-brand text-dark">Democratic Bank of Kerala <img src="../../assets/290-coin-outline.gif"
+                    width="50px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="home" routerLinkActive="active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="login" routerLinkActive="active">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Locate Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="first-card">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-6">
+                <img src="../../assets/undraw_code_thinking_re_gka2.svg" class="w-100">
+            </div>
+            <div class="col-3">
+                <div class="intro">
+                    <h2>Redefining Banking Experience</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur eos harum sed impedit.
+                        Veritatis
+                        voluptas sed amet neque expedita dignissimos.</p>
+                    <button class="btn mt-2" (click)="gotoLogin()">Login Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

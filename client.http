@@ -1,0 +1,110 @@
+POST http://localhost:5000/user/register
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password":"admin",
+    "accNo":101010
+}
+
+###
+
+POST http://localhost:5000/user/login
+Content-Type: application/json
+
+{
+    "username": "sunny",
+    "password":"sunny"
+}
+###
+POST http://localhost:5000/admin/open-account
+Content-Type: application/json
+
+{
+    "accountNo": 123450,
+    "firstname":"Mary",
+    "lastname":"Thomas",
+    "email":"JT@mail.com",
+    "aadharNo":12553652,
+    "pin":1785,
+    "balance":5000,
+    "address":{
+        "houseName":"Universal",
+        "street":"Kerala",
+        "pincode":123452
+    }
+}
+###
+POST http://localhost:5000/user/get-account
+Content-Type: application/json
+
+{
+    "accountNo": 123456
+}
+###
+POST http://localhost:5000/user/get-user
+Content-Type: application/json
+
+{
+    "accountNo": 123456
+}
+###
+POST http://localhost:5000/user/create-request
+Content-Type: application/json
+
+{
+    "accountNo": 123456,
+    "username":"sunny",
+    "password":"sunny",
+    "email":"sunny@mail.com",
+    "aadharNo":147852369,
+    "status": "Application Submitted"
+}
+###
+PUT http://localhost:5000/admin/update-status
+Content-Type: application/json
+
+{
+    "status":"Closed",
+    "accountNo":123456
+}
+###
+POST http://localhost:5000/user/get-request
+Content-Type: application/json
+
+{
+    "accountNo":152361
+}
+###
+GET http://localhost:5000/admin/account-holders
+###
+GET http://localhost:5000/admin/all-requests
+###
+GET http://localhost:5000/admin/all-users
+
+###
+PUT http://localhost:5000/user/update-profile
+Content-Type: application/json
+
+{
+    "accountNo": 123456,
+    "name":"Sunny Mathews",
+    "email":"sunny@mail.com",
+    "aadharNo":147852369,
+    "pin":1234,
+    "balance":1000
+}
+###
+POST http://localhost:5000/user/transaction-update
+Content-Type: application/json
+
+{
+    "accountNo":123456,
+    "transactionData":{
+    "type":"debit",
+    "amount":100,
+    "date":"02-04-2022",
+    "remarks":"small amount"
+    }
+    
+}

@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.card{
+    margin: 0rem 1rem;
+    background-image: linear-gradient(to right, #EC6F66, #F3A183);
+    padding: 5rem 3rem;
+    .card-body{
+        color: white;
+    }
+}

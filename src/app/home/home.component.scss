@@ -1,0 +1,60 @@
+.home {
+    background-image: url(../../assets/pattern-randomized.svg);
+    background-size: cover;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    animation: fade-in 1s linear both;
+
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+.nav-link {
+    color: black;
+    font-weight: bold;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+}
+
+.intro {
+    text-align: right;
+}
+
+.btn {
+    background-color: coral;
+    box-shadow: none;
+    color: white;
+    border-radius: 0;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.first-card {
+    margin-top: 2rem;
+}
+
+.pre-loader {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
